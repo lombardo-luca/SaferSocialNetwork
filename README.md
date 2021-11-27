@@ -142,18 +142,7 @@ equivale a chiamare il metodo followedMap.entrySet().
 La REP-INV della classe SocialNetwork, riportata formalmente all’interno
 del file d’implementazione è la seguente:
 
-
-( 1 ) ( postMap != null ) && ( followedMap != null )
-
-
-      && ( f o l l o w e r s M a p != null ) && ( numPost >= 0 ) &&
-( 2 ) ( p e r o g n i x , y . ( x != y && postMap . c o n t a i n s V a l u e ( x ) &&
-        postMap . c o n t a i n s V a l u e ( y ) ) => x . g e t I d ( ) != y . g e t I d ( ) ) &&
-( 3 ) ( p e r o g n i x . followedMap . c o n t a i n s K e y ( x ) =>
-        p e r o g n i y a p p a r t e n e n t e a followedMap . g e t ( x ) . x != y ) &&
-( 4 ) ( p e r o g n i x . f o l l o w e r s M a p . c o n t a i n s K e y ( x ) =>
-        p e r o g n i y a p p a r t e n e n t e a f o l l o w e r s M a p . g e t ( x ) . x != y )
-
+[vedi relazione.pdf]
 
 La proprietà (1) garantisce che le variabili di stato siano diverse da null
 e che il numero di post presenti nella rete sociale sia sempre positivo (può
@@ -216,11 +205,8 @@ Set<Post> dello stato concreto.
 4.3       Invariante di Rappresentazione
 La REP-INV è la stessa di quella della classe padre, con l’aggiunta delle
 seguenti proprietà:
-@ALSO
-( 1 ) ( r e p o r t e d P o s t s != null ) &&
-(2) ( per ogni x , y .
-( x != y && r e p o r t e d P o s t s . c o n t a i n s ( x ) &&
-r e p o r t e d P o s t s . c o n t a i n s ( y ) ) => x . g e t I d ( ) != y . g e t I d ( ) )
+
+      [vedi relazione.pdf]
 
 
 La proprietà (1) garantisce banalmente che l’insieme concreto dei post seg-
